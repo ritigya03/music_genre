@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+
+# Streamlit
+.streamlit/
+*.log
+
+# Environment files
+.env
+.venv/
+env/
+venv/
+ENV/
+Pipfile.lock
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Model files (optional: keep out large files)
+*.h5
+*.pkl
+*.joblib
+
+# Jupyter Notebooks checkpoints (if using notebooks)
+.ipynb_checkpoints/
+
+# VSCode settings (if using VSCode)
+.vscode/
+
+# Audio files (optional, or keep only a few small ones)
+audio_samples/*.wav
+
+# Cache
+.cache/
+*.cache/
+
+# TensorFlow & Keras
+saved_model/
+*.tfrecord
+checkpoint/
+
+# Misc
+*.tmp
+music_genre_model.h5
