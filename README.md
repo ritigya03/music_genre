@@ -20,7 +20,7 @@ A Streamlit-based web app that classifies music genres using a deep learning mod
 
 ---
 
-For testing - Some audio files present in audioSamples, download and use
+For testing - Some audio files are present in audioSamples, download and use
 
 ## 📦 Setup Instructions
 
