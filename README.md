@@ -20,6 +20,8 @@ A Streamlit-based web app that classifies music genres using a deep learning mod
 
 ---
 
+For testing - Some audio files present in audioSamples cd into it and use
+
 ## 📦 Setup Instructions
 
 ### 1. Clone the repo
@@ -28,3 +30,4 @@ A Streamlit-based web app that classifies music genres using a deep learning mod
 git clone https://github.com/ritigya03/music_genre
 cd dsc_music
 streamlit run app.py
+
