@@ -27,3 +27,4 @@ A Streamlit-based web app that classifies music genres using a deep learning mod
 ```bash
 git clone https://github.com/ritigya03/music_genre
 cd dsc_music
+streamlit run app.py
