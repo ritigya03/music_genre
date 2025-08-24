@@ -9,6 +9,7 @@ import tempfile
 import os
 import matplotlib.pyplot as plt
 import gdown
+import requests
 
 
 # Set page config
@@ -55,9 +56,17 @@ classes = ['blues', 'classical', 'country', 'disco', 'hiphop',
 def load_trained_model(path="music_genre_model.h5"):
     if not os.path.exists(path):
         try:
-            st.info("Downloading model...")
-            url = "https://drive.google.com/uc?id=1dGH0G4OnpsWNrIiCrR2m_mjjK8LrBBFl"
-            gdown.download(url, path, quiet=False)
+            st.info("Downloading model from GitHub Releases...")
+            url = "https://github.com/ritigya03/music_genre/releases/download/v1.0/music_genre_model.h5"
+
+            # Download with requests (works on Windows too)
+            response = requests.get(url, stream=True)
+            response.raise_for_status()
+            with open(path, "wb") as f:
+                for chunk in response.iter_content(chunk_size=8192):
+                    if chunk:
+                        f.write(chunk)
+
             st.success("Model downloaded successfully.")
         except Exception as e:
             st.error(f"Failed to download model: {e}")
